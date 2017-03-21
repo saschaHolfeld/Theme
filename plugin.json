@@ -1,0 +1,19 @@
+    {
+        "name"                  :"Theme",
+        "description"           :"Basic theme plugin",
+        "shortDescription"    : {"en": "Shop Strese Theme", "de": "Shop Strese Theme 2017"},
+        "namespace"             :"Theme",
+        "author"                :"Sascha Holfeld",
+        "keywords"              : ["theme", "Ceres", "template"],
+        "type"                  :"theme",
+        "require"               : [],
+        "serviceProvider"       :"Theme\\Providers\\ThemeServiceProvider",
+        "dataProviders"         :
+        [
+            {
+                "key"           :"Theme\\Containers\\ThemeContainer",
+                "name"          :"Dark background",
+                "description"   :"Change the background colour of the Ceres template"
+            }
+        ]
+    }
