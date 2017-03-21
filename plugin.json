@@ -1,9 +1,9 @@
     {
-        "name"                  :"Theme",
-        "description"           :"Basic theme plugin",
-        "shortDescription"    : {"en": "Shop Strese Theme", "de": "Shop Strese Theme 2017"},
+        "name"                  :"Strese Theme 2017",
+        "description"           :"Individuelles responsive Design 2017 - Sascha Holfeld 3W Future",
+        "shortDescription"    : {"en": "responsive Design 2017 - Sascha Holfeld 3W Future", "de": "responsive Design 2017 - Sascha Holfeld 3W Future"},
         "namespace"             :"Theme",
-        "author"                :"Sascha Holfeld",
+        "author"                :"Sascha Holfeld 3W Future",
         "keywords"              : ["theme", "Ceres", "template"],
         "type"                  :"theme",
         "require"               : [],
@@ -12,8 +12,8 @@
         [
             {
                 "key"           :"Theme\\Containers\\ThemeContainer",
-                "name"          :"Dark background",
-                "description"   :"Change the background colour of the Ceres template"
+                "name"          :"Webdesign 2017",
+                "description"   :"New Theme - 3W Future"
             }
         ]
     }
