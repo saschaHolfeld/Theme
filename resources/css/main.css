@@ -2,7 +2,7 @@
 body { color:#333333; background:#f6f6f6; font-family:'Montserrat', sans-serif; }
 .text-right { text-align:right; }
 * { -moz-osx-font-smoothing: grayscale; text-rendering: optimizelegibility; }
-.h3, h3 { font-size:18px; }
+.h3, h3 { font-size:16px; }
 .margin-top-0 { margin-top: 0; }
 .margin-bottom-0 { margin-bottom: 0; }
 .margin-top-025 { margin-top: 3px; }
