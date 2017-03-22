@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 body { font-family:'Montserrat', sans-serif; }
+.text-right { text-align:right; }
 * { -moz-osx-font-smoothing: grayscale; text-rendering: optimizelegibility; }
 .h3, h3 { font-size:18px; }
 .margin-top-0 { margin-top: 0; }
@@ -52,6 +53,8 @@ body { font-family:'Montserrat', sans-serif; }
 .padding-left-1 { padding-left: 12px; }
 .padding-left-2 { padding-left: 24px; }
 .no-padding { padding: 0 !important; }
+
+.bg-1 { background:#FFFFFF; }
 
 footer { background:#333333; }
 footer * { color:#FFFFFF; }
