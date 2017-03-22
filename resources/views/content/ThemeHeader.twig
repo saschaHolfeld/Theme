@@ -12,8 +12,9 @@
         <div class="row">
             {{ LayoutContainer.show("Ceres::Header.LeftSide") }}
 
+						<ul class="ibflist">
+						</ul>
             <ul id="controlsList" class="controls-list list-inline">
-								<li>TEST</li>
                 <li class="list-inline-item control-user">
                     <user-login-handler template="#vue-user-login-handler"
                             :user-data="{{ services.customer.getContact() | json_encode() }}"></user-login-handler>
