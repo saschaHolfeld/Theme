@@ -57,9 +57,9 @@ body { color:#333333; background:#f6f6f6; font-family:'Montserrat', sans-serif; 
 .bg-1 { background:#FFFFFF; }
 .color-1, .color-1 * { color:#333333 !important; }
 
-.top-bar { margin-bottom:0; background:#333333; } 
+.top-bar { background:#333333; } 
 .top-bar .controls-list > li a { padding:1.1rem 1.2rem; color:#FFFFFF; }
-
+.info-list { margin-bottom:0; }
 
 footer { background:#333333; }
 footer .h3 { letter-spacing:3px; }
