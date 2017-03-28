@@ -8,7 +8,8 @@ body { color:#333333; background:#f6f6f6; font-family:'Montserrat', sans-serif; 
 .block { display:block; }
 .bg-1 { background:#FFFFFF; }
 .color-1, .color-1 * { color:#333333 !important; }
-
+.relative { position:relative; }
+.wrapper-main #page-body { margin-top:130px; }
 .top-bar { background:#333333; } 
 .top-bar .controls-list > li a { padding:1.1rem 1.2rem; color:#FFFFFF; }
 .wrapper-main .navbar .navbar-nav .nav-item > .nav-link { min-width:auto !important; padding:20px 6px; border-right:none; color:#333333; text-transform:uppercase; }
