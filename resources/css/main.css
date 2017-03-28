@@ -21,3 +21,4 @@ footer ul li { margin-bottom:4px; font-size:14px; }
 .info-list li { padding:1.1rem 1.2rem; display:inline-block; font-size:0.8rem; }
 .cmp-country-settings, .cmp-search-box { top:48px; }
 .carousel-inner > .carousel-item > a > img, .carousel-inner > .carousel-item > img, .img-fluid { width:100%; }
+.carousel-caption { left:60%; top:30%; bottom:auto; }
