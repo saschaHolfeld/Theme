@@ -8,7 +8,7 @@ body { color:#333333; background:#f6f6f6; font-family:'Montserrat', sans-serif; 
 .block { display:block; }
 .bg-1 { background:#FFFFFF; }
 .color-1, .color-1 * { color:#333333 !important; }
-.relative { position:relative; }
+.relative { position:relative !important; }
 .wrapper-main #page-body { margin-top:130px; }
 .top-bar { background:#333333; } 
 .top-bar .controls-list > li a { padding:1.1rem 1.2rem; color:#FFFFFF; }
@@ -23,3 +23,5 @@ footer ul li { margin-bottom:4px; font-size:14px; }
 .cmp-country-settings, .cmp-search-box { top:48px; }
 .carousel-inner > .carousel-item > a > img, .carousel-inner > .carousel-item > img, .img-fluid { width:100%; }
 .carousel-caption { left:60%; top:30%; bottom:auto; }
+.carousel-caption * { letter-spacing:34px; font-size:40px; color: #333333; text-shadow:none; }
+.btn-primary { background-color:#3d3d3d; }
