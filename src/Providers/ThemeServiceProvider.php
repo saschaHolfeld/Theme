@@ -29,6 +29,12 @@ class ThemeServiceProvider extends ServiceProvider
 			$partial->set('footer', 'Theme::content.ThemeFooter');
 			$partial->set('header', 'Theme::content.ThemeHeader');
 		}, 99);
+
+		// provide template to use for homepage
+		$eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData) {
+			$container->setTemplate("Theme::Homepage.Homepage");
+			return false;
+		}, 99);
 	}
 }
 ?>

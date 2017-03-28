@@ -11,7 +11,7 @@ body { color:#333333; background:#f6f6f6; font-family:'Montserrat', sans-serif; 
 
 .top-bar { background:#333333; } 
 .top-bar .controls-list > li a { padding:1.1rem 1.2rem; color:#FFFFFF; }
-.wrapper-main .navbar .navbar-nav .nav-item > .nav-link { min-width:auto !important; border-right:none; color:#333333; text-transform:uppercase; }
+.wrapper-main .navbar .navbar-nav .nav-item > .nav-link { min-width:auto !important; padding:20px 6px; border-right:none; color:#333333; text-transform:uppercase; }
 .info-list { margin-bottom:0; }
 footer { background:#333333; }
 footer .h3 { letter-spacing:3px; }
@@ -19,3 +19,4 @@ footer * { color:#FFFFFF; }
 footer ul { margin:0; padding:0; list-style:none; }
 footer ul li { margin-bottom:4px; font-size:14px; }
 .info-list li { padding:1.1rem 1.2rem; display:inline-block; font-size:0.8rem; }
+.cmp-country-settings, .cmp-search-box { top:48px; }
