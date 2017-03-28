@@ -2,6 +2,7 @@
 
 namespace Theme\Providers;
 
+use IO\Helper\TemplateContainer;
 use IO\Extensions\Functions\Partial;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
