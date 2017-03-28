@@ -3,24 +3,22 @@
 {% set showDefaultHomepage = config("Ceres.default.homepage") %}
 
 {% block PageBody %}
-
+<div class="container-max">
     <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-example">
         <div class="carousel-inner" id="carousel-content">
 					<div class="carousel-item active">
 						<a href="">
 							<img class="img-fluid" src="{{ plugin_path("Theme") }}/images/home-teaser-1.jpg">
-							<div class="container relative">
-                  <div class="carousel-caption">
-                    <h3>Color&Care</h3>
-                    <p>Pflege und Schutz für coloriertes Haar</p>
-                    <button class="btn btn-primary">shop now</button>
-                  </div>
-                </div>
+              <div class="carousel-caption">
+                <h2>Color&Care</h2>
+                <p>Pflege und Schutz für coloriertes Haar</p>
+                <button class="btn btn-primary">shop now</button>
+              </div>
 						</a>
 					</div>
         </div>
         <a class="left carousel-control" href="#carousel-example" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>
         <a class="right carousel-control" href="#carousel-example" data-slide="next"><i class="icon-next fa fa-angle-right"></i></a>
     </div>
-
+</div>
 {% endblock %}

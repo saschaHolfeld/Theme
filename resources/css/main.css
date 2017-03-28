@@ -23,5 +23,6 @@ footer ul li { margin-bottom:4px; font-size:14px; }
 .cmp-country-settings, .cmp-search-box { top:48px; }
 .carousel-inner > .carousel-item > a > img, .carousel-inner > .carousel-item > img, .img-fluid { width:100%; }
 .carousel-caption { left:60%; top:30%; bottom:auto; }
-.carousel-caption * { letter-spacing:34px; font-size:40px; color: #333333; text-shadow:none; }
+.carousel-caption h2 { letter-spacing:34px; font-size:40px;   }
+.carousel-caption p { text-shadow:none; color:#333333; }
 .btn-primary { background-color:#3d3d3d; }
