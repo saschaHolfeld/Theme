@@ -25,4 +25,4 @@ footer ul li { margin-bottom:4px; font-size:14px; }
 .carousel-caption { left:50%; right:0; top:30%; bottom:auto; }
 .carousel-caption h2 { letter-spacing:34px; font-size:40px; text-shadow:none; color:#333333; }
 .carousel-caption p { text-shadow:none; color:#333333; }
-.btn-primary { padding:8px 20px; background-color:#3d3d3d; border:none; font-size:14px; }
+.btn-primary { padding:12px 30px; background-color:#3d3d3d; border:none; font-size:14px; text-transform:uppercase; }
