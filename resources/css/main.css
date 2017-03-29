@@ -3,7 +3,7 @@ body { color:#333333; background:#f6f6f6; font-family:'Montserrat', sans-serif; 
 .text-right { text-align:right; }
 * { -moz-osx-font-smoothing: grayscale; text-rendering: optimizelegibility; }
 .h3, h3 { font-size:16px; }
-
+.h-style-1 { letter-spacing:34px; text-shadow:none; color:#333333; }
 .no-padding { padding: 0 !important; }
 .block { display:block; }
 .bg-1 { background:#FFFFFF; }
@@ -26,3 +26,5 @@ footer ul li { margin-bottom:4px; font-size:14px; }
 .carousel-caption h2 { letter-spacing:34px; font-size:40px; text-shadow:none; color:#333333; }
 .carousel-caption p { text-shadow:none; color:#333333; }
 .btn-primary { padding:12px 30px; background-color:#3d3d3d; border:none; font-size:14px; text-transform:uppercase; }
+.wrapper-main .navbar { border-bottom:none; }
+#newsletter { background:url("../images/home-teaser-newsletter.jpg") no-repeat 0 0 / 100% auto; }
