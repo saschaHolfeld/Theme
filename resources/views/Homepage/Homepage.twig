@@ -1,5 +1,5 @@
 {% extends 'Ceres::Homepage.Homepage' %}
-{% set lang         = services.sessionStorage.getLang() %}
+{% set lang = services.sessionStorage.getLang() %}
 
 {% set homepageTopsellerID  = config("CeresRockstar.homepage.homepageTopsellerID") %}
 {% set homepageHeadlineDE  = config("CeresRockstar.homepage.homepageHeadlineDE") %}
@@ -15,10 +15,7 @@
 
 {% set itemList             = paginatedResult.documents %}
 
-{% block ThemeHomepage %}
-
 {# extends getPartial('page-design') #}
-
 
 {# block PageBody #}
 {% block ThemeHomepage %}
