@@ -32,4 +32,4 @@ footer ul li { margin-bottom:4px; font-size:14px; }
 #newsletter form div { width:400px; height:43px; margin-left:-200px; position:relative; left:50%; }
 #newsletter form div input { width:400px; height:43px; padding-right:102px; display:block; border:none; background:#FFF; text-indent:10px; }
 #newsletter form div button { width:102px; height:43px; position:absolute; top:0; right:0; background:#333; border:none; color:#FFFFFF; }
-.service-teaser, .service-teaser * { text-align:center; }
+.service-teaser, .service-teaser * { text-align:center; color:#FFFFFF; }
