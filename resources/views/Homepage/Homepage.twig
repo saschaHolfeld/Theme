@@ -1,8 +1,32 @@
-{% extends getPartial('page-design') %}
+{% extends 'Ceres::Homepage.Homepage' %}
+{% set lang         = services.sessionStorage.getLang() %}
 
-{% set showDefaultHomepage = config("Ceres.default.homepage") %}
+{% set homepageTopsellerID  = config("CeresRockstar.homepage.homepageTopsellerID") %}
+{% set homepageHeadlineDE  = config("CeresRockstar.homepage.homepageHeadlineDE") %}
+{% set homepageHeadlineEN  = config("CeresRockstar.homepage.homepageHeadlineEN") %}
+{% set homepageSublineDE  = config("CeresRockstar.homepage.homepageSublineDE") %}
+{% set homepageSublineEN  = config("CeresRockstar.homepage.homepageSublineEN") %}
+{% set homepageSectionHeadingDE  = config("CeresRockstar.homepage.homepageSectionHeadingDE") %}
+{% set homepageSectionHeadingEN  = config("CeresRockstar.homepage.homepageSectionHeadingEN") %}
 
-{% block PageBody %}
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+
+{% set paginatedResult      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':17, 'page':1, 'items':8, 'facets': facetParams, 'sorting': itemSort}) %}
+
+{% set itemList             = paginatedResult.documents %}
+
+{% block ThemeHomepage %}
+
+{# extends getPartial('page-design') #}
+
+
+{# block PageBody #}
+{% block ThemeHomepage %}
+
+{{ component( "Ceres::ItemList.Components.ItemList") }}
+{{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
+{{ component( "Ceres::Basket.Components.AddToBasket" ) }}
+
 <div class="container-max m-b-2">
     <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-example">
         <div class="carousel-inner" id="carousel-content">
@@ -31,7 +55,7 @@
     			<div class="col-xs-6"><img src="{{ plugin_path("Theme") }}/images/home-teaser-makeup.jpg" alt="" /></div>
     			<div class="col-xs-6"><img src="{{ plugin_path("Theme") }}/images/home-teaser-duefte.jpg" alt="" /></div>
     		</div>
-    		<div><img src="{{ plugin_path("Theme") }}/images/home-teaser-makeup.jpg" alt="" /></div>
+    		<div><img src="{{ plugin_path("Theme") }}/images/home-teaser-maenner.jpg" alt="" /></div>
     	</div>
     	<div class="col-md-3">
     		<img src="{{ plugin_path("Theme") }}/images/home-teaser-haut.jpg" alt="" />
