@@ -56,7 +56,15 @@
     	</div>
 	</div>
 </div>
-
+<div class="container-max p-t-2">
+    <ul class="product-list row grid">
+{% for item in itemList %}
+        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+        </li>
+{% endfor %}
+    </ul>
+</div>           
 <div class="container-max p-t-2">
 	<h2 class="h-style-1 m-b-2">Shop Strese - Haarpflege und Hautkosmetik vom Fachmann</h2>
 	<div class="row">
