@@ -3,7 +3,7 @@ body { color:#333333; background:#f6f6f6; font-family:'Montserrat', sans-serif; 
 .text-right { text-align:right; }
 * { -moz-osx-font-smoothing: grayscale; text-rendering: optimizelegibility; }
 .h3, h3 { font-size:16px; }
-.h-style-1 { letter-spacing:5px; text-shadow:none; color:#333333; font-size:30px; }
+.h-style-1 { letter-spacing:5px; text-shadow:none; color:#333333; font-size:28px; line-height:44px; }
 .no-padding { padding: 0 !important; }
 .block { display:block; }
 .bg-1 { background:#FFFFFF; }
