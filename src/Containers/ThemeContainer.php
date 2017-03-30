@@ -10,7 +10,7 @@ class ThemeContainer extends Controller
 {
 	public function call(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
 	{
-		$topItems = ThemeContainer::showTopItems($itemRepository);
+		$topItems = self::showTopItems($itemRepository);
 
 		$templateData = array(
 				'topItems' => array(),
