@@ -10,6 +10,8 @@ class ThemeContainer extends Controller
 {
 	public function call(Twig $twig):string
 	{
+		$topItems = ThemeContainer::showTopItems();
+
 		$templateData = array(
 				'topItems' => array(),
 		);
