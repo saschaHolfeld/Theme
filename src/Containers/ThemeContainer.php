@@ -18,7 +18,7 @@ class ThemeContainer extends Controller
 	}
 
 
-	public function showTopItems(ItemDataLayerRepositoryContract $itemRepository):string
+	public static function showTopItems(ItemDataLayerRepositoryContract $itemRepository):string
 	{
 		$itemColumns = [
 				'itemDescription' => [
