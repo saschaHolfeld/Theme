@@ -46,11 +46,16 @@
     	</div>
 	</div>
 </div>
+{{ templateData.topItems|length }}
+-- 
+{{ templateData.newItems|length }}
+--
+{{ templateData.offerItems|length }}
 <div class="container-max p-t-2">
     <ul class="product-list row grid">
     {% for item in templateData.topItems %}
         <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-          x  {# include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } #}
+          x
         </li>
     {% endfor %}
     </ul>
@@ -59,7 +64,7 @@
     <ul class="product-list row grid">
     {% for item in templateData.newItems %}
         <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-          x  
+          y
         </li>
     {% endfor %}
     </ul>
@@ -68,7 +73,7 @@
     <ul class="product-list row grid">
     {% for item in templateData.offerItems %}
         <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-          x  
+         z 
         </li>
     {% endfor %}
     </ul>
