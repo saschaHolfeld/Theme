@@ -57,7 +57,12 @@
 	</div>
 </div>
 
-{{ LayoutContainer.show("Theme::Basket.BeforeCheckoutButton") }}
+{% for item in topItems %}
+    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      x  {# include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } #}
+    </li>
+{% endfor %}
+
 
 <div class="container-max p-t-2">
     <ul class="product-list row grid">

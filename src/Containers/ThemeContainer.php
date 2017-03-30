@@ -13,10 +13,10 @@ class ThemeContainer extends Controller
 		$topItems = self::showTopItems($itemRepository);
 
 		$templateData = array(
-				'topItems' => array(),
+				'topItems' => $topItems,
 		);
 
-		return $twig->render('Theme::content.Theme');
+		return $twig->render('Theme::content.Theme', $topItems);
 	}
 
 
