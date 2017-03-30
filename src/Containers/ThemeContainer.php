@@ -20,9 +20,8 @@ class ThemeContainer extends Controller
 	}
 
 
-	public static function showTopItems(ItemDataLayerRepositoryContract $itemRepository):string
+	public static function showTopItems(ItemDataLayerRepositoryContract $itemRepository):array
 	{
-		/*
 		$itemColumns = [
 				'itemDescription' => [
 						'name1',
@@ -59,7 +58,6 @@ class ThemeContainer extends Controller
 		}
 
 		return $items;
-		*/
 	}
 }
 
