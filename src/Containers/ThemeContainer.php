@@ -22,6 +22,7 @@ class ThemeContainer extends Controller
 
 	public static function showTopItems(ItemDataLayerRepositoryContract $itemRepository):string
 	{
+		/*
 		$itemColumns = [
 				'itemDescription' => [
 						'name1',
@@ -58,6 +59,7 @@ class ThemeContainer extends Controller
 		}
 
 		return $items;
+		*/
 	}
 }
 
