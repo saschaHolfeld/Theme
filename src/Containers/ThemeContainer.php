@@ -8,9 +8,9 @@ use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 
 class ThemeContainer extends Controller
 {
-	public function call(Twig $twig):string
+	public function call(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
 	{
-		$topItems = ThemeContainer::showTopItems();
+		$topItems = ThemeContainer::showTopItems($itemRepository);
 
 		$templateData = array(
 				'topItems' => array(),
