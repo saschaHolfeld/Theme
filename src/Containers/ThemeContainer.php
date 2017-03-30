@@ -8,12 +8,17 @@ use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 
 class ThemeContainer extends Controller
 {
-	public function call(Twig $twig):string
+	public function call(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
 	{
-		return $twig->render('Theme::content.Theme');
+		$templateData = array(
+				'topItems' => ThemeContainer::showTopItems($itemRepository),
+		);
+
+		return $twig->render('Theme::content.Theme', $templateData);
 	}
 
-	public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
+
+	public static function showTopItems(ItemDataLayerRepositoryContract $itemRepository):string
 	{
 		$itemColumns = [
 				'itemDescription' => [
@@ -50,12 +55,7 @@ class ThemeContainer extends Controller
 		{
 			$items[] = $item;
 		}
-		$templateData = array(
-				'resultCount' => $resultItems->count(),
-				'currentItems' => $items
-		);
-
-		return $twig->render('TopItems::content.TopItems', $templateData);
+		return $items;
 	}
 }
 
