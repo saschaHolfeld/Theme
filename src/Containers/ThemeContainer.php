@@ -12,10 +12,12 @@ class ThemeContainer extends Controller
 	{
 		$topItems = self::showTopItems($itemRepository);
 		$newItems = self::showNewItems($itemRepository);
+		$offerItems = self::showOfferItems($itemRepository);
 
 		$templateData = array(
 				'topItems' => $topItems,
 				'newItems' => $newItems,
+				'offerItems' => $offerItems,
 		);
 
 		return $twig->render('Theme::content.Theme', $templateData);
@@ -84,6 +86,46 @@ class ThemeContainer extends Controller
 		$itemFilter = [
 				'itemBase.isStoreSpecial' => [
 						'shopAction' => [1]
+				]
+		];
+
+		$itemParams = [
+				'language' => 'de'
+		];
+
+		$resultItems = $itemRepository->search($itemColumns, $itemFilter, $itemParams);
+
+		$items = array();
+		foreach ($resultItems as $item)
+		{
+			$items[] = $item;
+		}
+
+		return $items;
+	}
+
+	public static function showOfferItems(ItemDataLayerRepositoryContract $itemRepository):array
+	{
+		$itemColumns = [
+				'itemDescription' => [
+						'name1',
+						'description'
+				],
+				'variationBase' => [
+						'id'
+				],
+				'variationRetailPrice' => [
+						'price'
+				],
+				'variationImageList' => [
+						'path',
+						'cleanImageName'
+				]
+		];
+
+		$itemFilter = [
+				'itemBase.isStoreSpecial' => [
+						'shopAction' => [2]
 				]
 		];
 
