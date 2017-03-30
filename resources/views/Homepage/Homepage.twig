@@ -1,19 +1,9 @@
 {% extends 'Ceres::Homepage.Homepage' %}
 {% set lang = services.sessionStorage.getLang() %}
 
-{% set homepageTopsellerID  = config("CeresRockstar.homepage.homepageTopsellerID") %}
-{% set homepageHeadlineDE  = config("CeresRockstar.homepage.homepageHeadlineDE") %}
-{% set homepageHeadlineEN  = config("CeresRockstar.homepage.homepageHeadlineEN") %}
-{% set homepageSublineDE  = config("CeresRockstar.homepage.homepageSublineDE") %}
-{% set homepageSublineEN  = config("CeresRockstar.homepage.homepageSublineEN") %}
-{% set homepageSectionHeadingDE  = config("CeresRockstar.homepage.homepageSectionHeadingDE") %}
-{% set homepageSectionHeadingEN  = config("CeresRockstar.homepage.homepageSectionHeadingEN") %}
 
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
-{% set paginatedResult      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':17, 'page':1, 'items':8, 'facets': facetParams, 'sorting': itemSort}) %}
-
-{% set itemList             = paginatedResult.documents %}
 
 {# extends getPartial('page-design') #}
 
@@ -56,13 +46,13 @@
     	</div>
 	</div>
 </div>
-
+<ul class="product-list row grid">
 {% for item in topItems %}
     <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
       x  {# include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } #}
     </li>
 {% endfor %}
-
+</ul>
 
 <div class="container-max p-t-2">
     <ul class="product-list row grid">
