@@ -36,13 +36,13 @@ class ThemeServiceProvider extends ServiceProvider
 
 			$topItems = array("Test", "Test2", "Test3", "Test4");
 			$templateData = array(
-					'topItems' => "Testqwdxklgdklgddclkb"
+					'topItems' => $topItems
 			);
 
 			$container->setTemplateData($templateData);
 			$container->setTemplate("Theme::Homepage.Homepage");
 
-			return false;
+			//return false;
 		}, 99);
 	}
 
