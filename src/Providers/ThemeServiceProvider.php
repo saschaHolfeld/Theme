@@ -37,7 +37,7 @@ class ThemeServiceProvider extends ServiceProvider
 
 			//$topItems = self::showTopItems($itemRepository);
 
-			$topItems = array();
+			$topItems = array("Test", "Test2", "Test3", "Test4");
 			$templateData = array(
 					'topItems' => $topItems
 			);
