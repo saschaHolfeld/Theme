@@ -24,7 +24,7 @@ class ThemeContainer extends Controller
 	}
 
 
-	public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
+	public function showTopItems(ItemDataLayerRepositoryContract $itemRepository):array
 	{
 		$itemColumns = [
 				'itemDescription' => [
