@@ -14,8 +14,6 @@ class ThemeContainer extends Controller
 		$newItems = self::showNewItems($itemRepository);
 		$offerItems = self::showOfferItems($itemRepository);
 
-print_r($topItems);
-
 		$templateData = array(
 				'topItems' => $topItems,
 				'newItems' => $newItems,
@@ -26,7 +24,7 @@ print_r($topItems);
 	}
 
 
-	public static function showTopItems(ItemDataLayerRepositoryContract $itemRepository):array
+	public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
 	{
 		$itemColumns = [
 				'itemDescription' => [
@@ -55,15 +53,20 @@ print_r($topItems);
 				'language' => 'de'
 		];
 
-		$resultItems = $itemRepository->search($itemColumns, $itemFilter, $itemParams);
+		$resultItems = $itemRepository
+		->search($itemColumns, $itemFilter, $itemParams);
 
 		$items = array();
 		foreach ($resultItems as $item)
 		{
 			$items[] = $item;
 		}
+		$templateData = array(
+				'resultCount' => $resultItems->count(),
+				'currentItems' => $items
+		);
 
-		return $items;
+		return $templateData;
 	}
 
 	public static function showNewItems(ItemDataLayerRepositoryContract $itemRepository):array
