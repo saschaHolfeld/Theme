@@ -70,6 +70,16 @@
             {% else %}
                 <li>X No items found!</li>
         {% endif %}
+
+{% if topItems is defined %}
+y
+{%  else %}
+n
+{% endif %}
+:{{ topItems }}
+<br />
+type: {{ topItems|get_type }}
+
         {% if topItems is not null %}
             {% for item in topItems %}
                 <li class="card" style="width: 280px">x
@@ -91,37 +101,10 @@
                 </li>
             {% endfor %}
  
-            {% else %}
+        {% else %}
                 <li>No items found!</li>
         {% endif %}
         
-<div class="container-max p-t-2">
-    <ul class="product-list row grid">
-    {% for item in topItems %}
-        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-          x
-        </li>
-    {% endfor %}
-    </ul>
-</div>
-<div class="container-max p-t-2">
-    <ul class="product-list row grid">
-    {% for item in newItems %}
-        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-          y
-        </li>
-    {% endfor %}
-    </ul>
-</div>  
-<div class="container-max p-t-2">
-    <ul class="product-list row grid">
-    {% for item in offerItems %}
-        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-         z 
-        </li>
-    {% endfor %}
-    </ul>
-</div>  
 <div class="container-max">
 	<div class="bg-2 p-t-3 p-b-3 service-teaser">
 		<div class="row">
