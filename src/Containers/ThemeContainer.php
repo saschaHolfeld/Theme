@@ -14,6 +14,8 @@ class ThemeContainer extends Controller
 		$newItems = self::showNewItems($itemRepository);
 		$offerItems = self::showOfferItems($itemRepository);
 
+print_r($topItems);
+
 		$templateData = array(
 				'topItems' => $topItems,
 				'newItems' => $newItems,

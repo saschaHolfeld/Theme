@@ -9,7 +9,7 @@
 
 {% block PageBody %}
 
-{{ component( "Ceres::ItemList.Components.ItemList") }}
+{# component( "Ceres::ItemList.Components.ItemList") #}
 
 <div class="container-max m-b-1">
     <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-example">
@@ -46,11 +46,13 @@
     	</div>
 	</div>
 </div>
+{{ templateData|length }}
 {{ templateData.topItems|length }}
 -- 
 {{ templateData.newItems|length }}
 --
 {{ templateData.offerItems|length }}
+
 <div class="container-max p-t-2">
     <ul class="product-list row grid">
     {% for item in templateData.topItems %}
