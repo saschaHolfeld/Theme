@@ -49,7 +49,8 @@
 
         {% if templateData.topItems is not null %}
             {% for templateData.item in topItems %}
-                <li class="card" style="width: 280px">
+                <li class="card" style="width: 280px">y
+                {#
                     <div class="card-block">
                         <h4 class="card-title">{{ item.itemDescription.name1 }}</h4>
                         <h6 class="card-subtitle text-muted">ID: {{ item.variationBase.id }}</h6>
@@ -62,6 +63,7 @@
                     <div class="card-footer bg-primary">
                         <h4 style="text-align: center">Price: {{ item.variationRetailPrice.price }} €</h4>
                     </div>
+                    #}
                 </li>
             {% endfor %}
  
@@ -70,7 +72,9 @@
         {% endif %}
         {% if topItems is not null %}
             {% for item in topItems %}
-                <li class="card" style="width: 280px">
+                <li class="card" style="width: 280px">x
+                {#
+           
                     <div class="card-block">
                         <h4 class="card-title">{{ item.itemDescription.name1 }}</h4>
                         <h6 class="card-subtitle text-muted">ID: {{ item.variationBase.id }}</h6>
@@ -83,6 +87,7 @@
                     <div class="card-footer bg-primary">
                         <h4 style="text-align: center">Price: {{ item.variationRetailPrice.price }} €</h4>
                     </div>
+                    #}
                 </li>
             {% endfor %}
  
