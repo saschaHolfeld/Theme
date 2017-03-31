@@ -44,6 +44,7 @@ class ThemeServiceProvider extends ServiceProvider
 
 			$container->setTemplateData($templateData);
 			$container->setTemplate("Theme::Homepage.Homepage");
+
 			return false;
 		}, 99);
 	}
