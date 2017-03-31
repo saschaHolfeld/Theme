@@ -35,58 +35,15 @@ class ThemeServiceProvider extends ServiceProvider
 			//$topItems = self::showTopItems($itemRepository);
 
 			$topItems = array("Test", "Test2", "Test3", "Test4");
-			$templateData = array(
+			$data = array(
 					'topItems' => $topItems
 			);
 
-			$container->setTemplateData($templateData);
+			$container->setTemplateData($data);
 			$container->setTemplate("Theme::Homepage.Homepage");
 
 			return false;
 		}, 99);
 	}
-
-/*
-	public function showTopItems(ItemDataLayerRepositoryContract $itemRepository):array
-	{
-		$itemColumns = [
-				'itemDescription' => [
-						'name1',
-						'description'
-				],
-				'variationBase' => [
-						'id'
-				],
-				'variationRetailPrice' => [
-						'price'
-				],
-				'variationImageList' => [
-						'path',
-						'cleanImageName'
-				]
-		];
-
-		$itemFilter = [
-				'itemBase.isStoreSpecial' => [
-						'shopAction' => [3]
-				]
-		];
-
-		$itemParams = [
-				'language' => 'de'
-		];
-
-		$resultItems = $itemRepository
-		->search($itemColumns, $itemFilter, $itemParams);
-
-		$items = array();
-		foreach ($resultItems as $item)
-		{
-			$items[] = $item;
-		}
-
-		return $items;
-	}
-*/
 }
 ?>

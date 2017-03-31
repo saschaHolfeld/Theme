@@ -47,23 +47,9 @@
 	</div>
 </div>
 
-        {% if templateData.topItems is not null %}
+        {% if data.topItems is not null %}
             {% for item in templateData.topItems %}
                 <li class="card" style="width: 280px">y
-                {#
-                    <div class="card-block">
-                        <h4 class="card-title">{{ item.itemDescription.name1 }}</h4>
-                        <h6 class="card-subtitle text-muted">ID: {{ item.variationBase.id }}</h6>
-                    </div>
-                    {% set image = item.variationImageList | first %}
-                    <img class="col-lg-12" src="{{ image.path }}" alt="{{ image.cleanImageName }}">
-                    <div class="card-block">
-                        <p class="card-text">{{ item.itemDescription.description }}</p>
-                    </div>
-                    <div class="card-footer bg-primary">
-                        <h4 style="text-align: center">Price: {{ item.variationRetailPrice.price }} €</h4>
-                    </div>
-                    #}
                 </li>
             {% endfor %}
  
@@ -71,32 +57,9 @@
                 <li>X No items found!</li>
         {% endif %}
 
-{% if topItems is defined %}
-y
-{%  else %}
-n
-{% endif %}
-:{{ topItems }}
-<br />
-
         {% if topItems is not null %}
             {% for item in topItems %}
                 <li class="card" style="width: 280px">x
-                {#
-           
-                    <div class="card-block">
-                        <h4 class="card-title">{{ item.itemDescription.name1 }}</h4>
-                        <h6 class="card-subtitle text-muted">ID: {{ item.variationBase.id }}</h6>
-                    </div>
-                    {% set image = item.variationImageList | first %}
-                    <img class="col-lg-12" src="{{ image.path }}" alt="{{ image.cleanImageName }}">
-                    <div class="card-block">
-                        <p class="card-text">{{ item.itemDescription.description }}</p>
-                    </div>
-                    <div class="card-footer bg-primary">
-                        <h4 style="text-align: center">Price: {{ item.variationRetailPrice.price }} €</h4>
-                    </div>
-                    #}
                 </li>
             {% endfor %}
  
