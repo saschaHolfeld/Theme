@@ -47,16 +47,15 @@
 	</div>
 </div>
 --
-{{ templateData|length }}
-{{ templateData.topItems|length }}
+{{ topItems|length }}
 -- 
-{{ templateData.newItems|length }}
+{{ newItems|length }}
 --
-{{ templateData.offerItems|length }}
+{{ offerItems|length }}
 
 <div class="container-max p-t-2">
     <ul class="product-list row grid">
-    {% for item in templateData.topItems %}
+    {% for item in topItems %}
         <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           x
         </li>
@@ -65,7 +64,7 @@
 </div>
 <div class="container-max p-t-2">
     <ul class="product-list row grid">
-    {% for item in templateData.newItems %}
+    {% for item in newItems %}
         <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           y
         </li>
@@ -74,7 +73,7 @@
 </div>  
 <div class="container-max p-t-2">
     <ul class="product-list row grid">
-    {% for item in templateData.offerItems %}
+    {% for item in offerItems %}
         <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
          z 
         </li>
