@@ -7,6 +7,7 @@ use IO\Extensions\Functions\Partial;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
+use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 
 class ThemeServiceProvider extends ServiceProvider
 {
@@ -22,7 +23,7 @@ class ThemeServiceProvider extends ServiceProvider
 	/**
 	 * Boot a template for the footer that will be displayed in the template plugin instead of the original footer.
 	 */
-	public function boot(Twig $twig, Dispatcher $eventDispatcher)
+	public function boot(Twig $twig, Dispatcher $eventDispatcher, ItemDataLayerRepositoryContract $itemRepository)
 	{
 
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
@@ -33,9 +34,60 @@ class ThemeServiceProvider extends ServiceProvider
 
 		// provide template to use for homepage
 		$eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData) {
+
+			$topItems = self::showTopItems($itemRepository);
+
+			$templateData = array(
+					'topItems' => $topItems
+			);
+
+			$container->setTemplateData($templateData);
 			$container->setTemplate("Theme::Homepage.Homepage");
 			return false;
 		}, 99);
 	}
+
+
+	public function showTopItems(ItemDataLayerRepositoryContract $itemRepository):array
+	{
+		$itemColumns = [
+				'itemDescription' => [
+						'name1',
+						'description'
+				],
+				'variationBase' => [
+						'id'
+				],
+				'variationRetailPrice' => [
+						'price'
+				],
+				'variationImageList' => [
+						'path',
+						'cleanImageName'
+				]
+		];
+
+		$itemFilter = [
+				'itemBase.isStoreSpecial' => [
+						'shopAction' => [3]
+				]
+		];
+
+		$itemParams = [
+				'language' => 'de'
+		];
+
+		$resultItems = $itemRepository
+		->search($itemColumns, $itemFilter, $itemParams);
+
+		$items = array();
+		foreach ($resultItems as $item)
+		{
+			$items[] = $item;
+		}
+
+		return $items;
+	}
+
 }
 ?>
