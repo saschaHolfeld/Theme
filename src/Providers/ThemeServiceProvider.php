@@ -35,19 +35,19 @@ class ThemeServiceProvider extends ServiceProvider
 		// provide template to use for homepage
 		$eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData) {
 
-			$topItems = self::showTopItems($itemRepository);
+			//$topItems = self::showTopItems($itemRepository);
 
-			$templateData = array(
-					'topItems' => $topItems
-			);
+			//$templateData = array(
+			//		'topItems' => $topItems
+			//);
 
-			$container->setTemplateData($templateData);
+			//$container->setTemplateData($templateData);
 			$container->setTemplate("Theme::Homepage.Homepage");
 			return false;
 		}, 99);
 	}
 
-
+/*
 	public function showTopItems(ItemDataLayerRepositoryContract $itemRepository):array
 	{
 		$itemColumns = [
@@ -88,6 +88,6 @@ class ThemeServiceProvider extends ServiceProvider
 
 		return $items;
 	}
-
+*/
 }
 ?>
