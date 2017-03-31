@@ -61,12 +61,8 @@ class ThemeContainer extends Controller
 		{
 			$items[] = $item;
 		}
-		$templateData = array(
-				'resultCount' => $resultItems->count(),
-				'currentItems' => $items
-		);
 
-		return $templateData;
+		return $items;
 	}
 
 	public static function showNewItems(ItemDataLayerRepositoryContract $itemRepository):array
