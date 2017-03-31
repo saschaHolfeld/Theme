@@ -37,11 +37,12 @@ class ThemeServiceProvider extends ServiceProvider
 
 			//$topItems = self::showTopItems($itemRepository);
 
-			//$templateData = array(
-			//		'topItems' => $topItems
-			//);
+			$topItems = array();
+			$templateData = array(
+					'topItems' => $topItems
+			);
 
-			//$container->setTemplateData($templateData);
+			$container->setTemplateData($templateData);
 			$container->setTemplate("Theme::Homepage.Homepage");
 			return false;
 		}, 99);
