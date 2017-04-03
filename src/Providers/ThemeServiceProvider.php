@@ -39,8 +39,8 @@ class ThemeServiceProvider extends ServiceProvider
 					'topItems' => $topItems
 			);
 
-			$container->setTemplateData($data);
 			$container->setTemplate("Theme::Homepage.Homepage");
+			$container->setTemplateData($data);
 
 			return false;
 		}, 99);
