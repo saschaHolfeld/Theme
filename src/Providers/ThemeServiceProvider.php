@@ -44,6 +44,29 @@ class ThemeServiceProvider extends ServiceProvider
 
 			return false;
 		}, 99);
+
+
+		/*
+		 *         'tpl.home'               => 'Homepage.Homepage',                // provide template to use for homepage
+		 *         'tpl.category.content'   => 'Category.Content.CategoryContent', // provide template to use for content categories
+		 *         'tpl.category.item'      => 'Category.Item.CategoryItem',       // provide template to use for item categories
+		 */
+		$eventDispatcher->listen('IO.tpl.category.item', function(TemplateContainer $container, $templateData) {
+
+			//$topItems = self::showTopItems($itemRepository);
+
+			$topItems = array("Test", "Test2", "Test3", "Test4");
+			$data = array(
+					'topItems' => $topItems
+			);
+
+			$container->setTemplate("Theme::Category.Item.CategoryItem");
+			$container->setTemplateData($data);
+
+			return false;
+		}, 99);
+
+
 	}
 }
 ?>
