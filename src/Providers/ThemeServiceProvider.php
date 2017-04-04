@@ -63,7 +63,12 @@ class ThemeServiceProvider extends ServiceProvider
 			);
 
 			$container->setTemplate("Theme::Category.Item.CategoryItem");
-			//$container->setTemplateData($data);
+			$container->setTemplateData(
+					array_merge($data, $container->getTemplateData())
+					);
+			$container->renderTemplateContainer($container);
+
+			return false;
 
 		}, self::EVENT_LISTENER_PRIORITY);
 
