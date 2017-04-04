@@ -54,7 +54,8 @@ class ThemeServiceProvider extends ServiceProvider
 		 *         'tpl.category.item'      => 'Category.Item.CategoryItem',       // provide template to use for item categories
 		 */
 		$eventDispatcher->listen('IO.tpl.category.item', function(TemplateContainer $container, $templateData) {
-
+			$container->setTemplate("Theme::Category.Item.CategoryItem");
+/*
 			//$topItems = self::showTopItems($itemRepository);
 
 			$topItems = array("Test", "Test2", "Test3", "Test4");
@@ -67,7 +68,7 @@ class ThemeServiceProvider extends ServiceProvider
 					array_merge($data, $container->getTemplateData())
 					);
 			$container->renderTemplateContainer($container);
-
+*/
 			return false;
 
 		}, self::EVENT_LISTENER_PRIORITY);
