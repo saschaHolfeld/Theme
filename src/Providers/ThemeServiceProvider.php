@@ -63,7 +63,7 @@ class ThemeServiceProvider extends ServiceProvider
 			);
 
 			$container->setTemplate("Theme::Category.Item.CategoryItem");
-			$container->setTemplateData($data);
+			//$container->setTemplateData($data);
 
 			return false;
 
