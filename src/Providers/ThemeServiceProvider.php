@@ -55,6 +55,15 @@ class ThemeServiceProvider extends ServiceProvider
 		 */
 		$eventDispatcher->listen('IO.tpl.category.item', function(TemplateContainer $container, $templateData) {
 			$container->setTemplate("Theme::Category.Item.CategoryItem");
+
+			$topItems = array("Test", "Test2", "Test3", "Test4");
+			$data = array(
+					'topItems' => $topItems
+			);
+			$container->setTemplateData(
+					array_merge($data, $container->getTemplateData())
+					);
+
 /*
 			//$topItems = self::showTopItems($itemRepository);
 
