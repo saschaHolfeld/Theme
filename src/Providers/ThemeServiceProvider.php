@@ -11,6 +11,7 @@ use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 
 class ThemeServiceProvider extends ServiceProvider
 {
+    const EVENT_LISTENER_PRIORITY = 50;
 
 	/**
 	 * Register the service provider.
@@ -27,7 +28,7 @@ class ThemeServiceProvider extends ServiceProvider
 		{
 			$partial->set('footer', 'Theme::content.ThemeFooter');
 			$partial->set('header', 'Theme::content.ThemeHeader');
-		}, 99);
+		}, self::EVENT_LISTENER_PRIORITY);
 
 		// provide template to use for homepage
 		$eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData) {
@@ -43,7 +44,8 @@ class ThemeServiceProvider extends ServiceProvider
 			$container->setTemplateData($data);
 
 			return false;
-		}, 99);
+
+		}, self::EVENT_LISTENER_PRIORITY);
 
 
 		/*
@@ -64,7 +66,8 @@ class ThemeServiceProvider extends ServiceProvider
 			$container->setTemplateData($data);
 
 			return false;
-		}, 99);
+
+		}, self::EVENT_LISTENER_PRIORITY);
 
 
 	}
