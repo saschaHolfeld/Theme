@@ -65,8 +65,6 @@ class ThemeServiceProvider extends ServiceProvider
 			$container->setTemplate("Theme::Category.Item.CategoryItem");
 			//$container->setTemplateData($data);
 
-			return false;
-
 		}, self::EVENT_LISTENER_PRIORITY);
 
 
