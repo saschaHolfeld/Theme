@@ -23,7 +23,6 @@ class ThemeServiceProvider extends ServiceProvider
 
 	public function boot(Twig $twig, Dispatcher $eventDispatcher, ItemDataLayerRepositoryContract $itemRepository)
 	{
-
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
 		{
 			$partial->set('footer', 'Theme::content.ThemeFooter');
@@ -55,34 +54,18 @@ class ThemeServiceProvider extends ServiceProvider
 		 */
 		$eventDispatcher->listen('IO.tpl.category.item', function(TemplateContainer $container, $templateData) {
 			$container->setTemplate("Theme::Category.Item.CategoryItem");
-
-			$topItems = array("Test", "Test2", "Test3", "Test4");
-			$data = array(
-					'topItems' => $topItems
-			);
-			$container->setTemplateData(
-					array_merge($data, $container->getTemplateData())
-					);
-
 /*
-			//$topItems = self::showTopItems($itemRepository);
-
 			$topItems = array("Test", "Test2", "Test3", "Test4");
 			$data = array(
 					'topItems' => $topItems
 			);
-
-			$container->setTemplate("Theme::Category.Item.CategoryItem");
 			$container->setTemplateData(
 					array_merge($data, $container->getTemplateData())
 					);
-			$container->renderTemplateContainer($container);
 */
 			return false;
 
 		}, self::EVENT_LISTENER_PRIORITY);
-
-
 	}
 }
 ?>
